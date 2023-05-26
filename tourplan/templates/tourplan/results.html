@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load tags %}
+
+{% block title %}旅行プラン検索{% endblock %}
+{% block content%}
+
+<div>
+{% for result in results %}
+    {% if result|last_two == '日目' %}
+        </div>      
+        <div class="plan">
+            <h2>{{ result }}</h2>
+
+    {% else %}
+            <p>{{ result }}</p>
+    {% endif %}
+{% endfor %}
+</div>
+
+
+{% endblock %}

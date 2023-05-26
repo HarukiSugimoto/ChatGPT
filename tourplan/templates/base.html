@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'tourplan/base.css' %}">
+  </head>
+  <body>
+    <header>
+        <h1>ChatGPTによる旅行プランシステム</h1>
+    </header>
+    <nav>
+      <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="{% url 'tourplan:search' %}">プラン検索</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock %}
+    <footer>
+      <p>&copy; 2023 旅行プランシステム. All rights reserved.</p>
+    </footer> 
+  </body>
+</html>
