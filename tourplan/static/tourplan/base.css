@@ -109,3 +109,17 @@ input[type="checkbox"] {
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
 }
+.plan p {
+    margin: 0;
+    padding: 0;
+}
+.keywords input{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+main {
+    margin: 10px 0;
+}

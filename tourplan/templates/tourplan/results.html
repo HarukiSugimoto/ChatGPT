@@ -6,13 +6,20 @@
 
 <div>
 {% for result in results %}
-    {% if result|last_two == '日目' %}
+    {% if result|last_two == '日目' or result == '日帰り' %}
         </div>      
         <div class="plan">
             <h2>{{ result }}</h2>
-
-    {% else %}
-            <p>{{ result }}</p>
+    {% elif result|first_two == '移動' %}
+            <p>　・</p>
+            <p>　・</p>
+            <p>　・</p>
+            <p>{{result|trans_min}}</p>
+    {% elif result|time %}
+            <p>　・</p>
+            <p>　・</p>
+            <p>　・</p>
+            <p>{{ result }}</p> 
     {% endif %}
 {% endfor %}
 </div>
